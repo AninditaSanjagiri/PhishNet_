@@ -1,0 +1,126 @@
+.explain-panel {
+  display: flex; flex-direction: column; gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg2);
+}
+
+.explain-header {
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 10px;
+}
+
+.explain-title {
+  font-family: var(--font-head); font-weight: 700; font-size: 15px;
+}
+
+.dominant-badge {
+  display: flex; align-items: center; gap: 7px;
+  padding: 4px 12px;
+  border: 1px solid; border-radius: 100px;
+  font-size: 12px;
+}
+
+.dom-dot { width: 7px; height: 7px; border-radius: 50%; flex-shrink: 0; }
+
+.explain-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+
+.explain-card {
+  display: flex; flex-direction: column; gap: 12px;
+  padding: 14px;
+  background: var(--bg3);
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+}
+
+.ec-header { display: flex; flex-direction: column; gap: 2px; }
+
+.ec-label {
+  font-family: var(--font-head); font-weight: 700; font-size: 13px;
+}
+.ec-label.accent { color: var(--accent); }
+.ec-label.purple { color: var(--purple); }
+
+.ec-sub { font-size: 10px; color: var(--text3); letter-spacing: 0.05em; }
+
+/* SHAP */
+.shap-list { display: flex; flex-direction: column; gap: 8px; }
+
+.shap-row {
+  display: flex; align-items: center; gap: 8px;
+}
+
+.shap-feat {
+  width: 130px; font-size: 11px; color: var(--text2);
+  flex-shrink: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+
+.shap-bar-wrap {
+  flex: 1; height: 6px; background: var(--bg2); border-radius: 100px; overflow: hidden;
+}
+
+.shap-bar {
+  height: 100%; border-radius: 100px;
+}
+.shap-bar.phish { background: var(--danger); box-shadow: 0 0 4px rgba(255,56,96,0.4); }
+.shap-bar.legit { background: var(--safe);   box-shadow: 0 0 4px rgba(0,230,118,0.3); }
+
+.shap-val { font-size: 11px; width: 56px; text-align: right; flex-shrink: 0; }
+.shap-val.phish { color: var(--danger); }
+.shap-val.legit { color: var(--safe); }
+
+/* LIME */
+.lime-list {
+  display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-start;
+}
+
+.lime-token {
+  display: inline-flex; flex-direction: column; align-items: center; gap: 1px;
+  padding: 4px 8px;
+  border-radius: var(--radius);
+  font-size: 12px; font-family: var(--font-mono);
+  border: 1px solid;
+  cursor: default;
+  transition: opacity 0.15s;
+}
+
+.lime-token.phish {
+  background: rgba(255,56,96,0.1); border-color: rgba(255,56,96,0.3);
+  color: var(--danger);
+}
+.lime-token.legit {
+  background: rgba(0,229,255,0.07); border-color: rgba(0,229,255,0.2);
+  color: var(--accent);
+}
+
+.lime-w { font-size: 9px; opacity: 0.7; }
+
+.explain-note {
+  font-size: 10px; color: var(--text3); margin-top: 4px; letter-spacing: 0.03em;
+}
+
+.explain-empty { font-size: 12px; color: var(--text3); }
+
+/* Modality contributions */
+.contrib-row {
+  display: flex; align-items: center; gap: 10px; flex-wrap: wrap;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.contrib-label { font-size: 11px; color: var(--text3); }
+
+.contrib-chip {
+  padding: 3px 10px; border-radius: 100px; font-size: 11px;
+  border: 1px solid var(--border);
+}
+.contrib-chip.url   { color: var(--accent); border-color: rgba(0,229,255,0.3); }
+.contrib-chip.text  { color: var(--purple); border-color: rgba(167,139,250,0.3); }
+.contrib-chip.image { color: var(--warn);   border-color: rgba(255,176,32,0.3); }
+
+@media (max-width: 700px) {
+  .explain-grid { grid-template-columns: 1fr; }
+}

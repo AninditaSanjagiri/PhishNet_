@@ -1,0 +1,51 @@
+.latency-panel {
+  display: flex; flex-direction: column; gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--bg2);
+}
+
+.panel-header {
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.panel-title {
+  font-family: var(--font-head); font-weight: 700; font-size: 15px;
+}
+
+.lat-total {
+  font-size: 13px; color: var(--accent);
+  font-weight: 600;
+}
+
+.lat-bars { display: flex; flex-direction: column; gap: 10px; }
+
+.lat-row { display: flex; align-items: center; gap: 10px; }
+
+.lat-label { font-size: 12px; color: var(--text2); width: 82px; flex-shrink: 0; }
+
+.lat-track {
+  flex: 1; height: 6px; background: var(--bg3);
+  border-radius: 100px; overflow: hidden;
+}
+
+.lat-fill { height: 100%; border-radius: 100px; }
+
+.lat-val { font-size: 12px; width: 58px; text-align: right; flex-shrink: 0; }
+
+.lat-note-row { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.lat-chip {
+  font-size: 11px; color: var(--text3);
+  padding: 3px 10px;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+}
+
+.lat-research-note {
+  font-size: 10px; color: var(--text3);
+  letter-spacing: 0.03em; line-height: 1.5;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}

@@ -1,0 +1,127 @@
+.text-robustness-demo {
+  display: flex; flex-direction: column; gap: 16px;
+  padding: 20px;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  border-radius: var(--radius-lg);
+  background: rgba(167, 139, 250, 0.02);
+}
+
+.trd-header { display: flex; flex-direction: column; gap: 3px; }
+.trd-title { font-family: var(--font-head); font-weight: 700; font-size: 15px; }
+.trd-sub   { font-size: 11px; color: var(--text3); letter-spacing: 0.05em; }
+
+.trd-input-row { display: flex; flex-direction: column; gap: 10px; }
+
+.trd-textarea {
+  width: 100%;
+  padding: 12px 14px;
+  background: var(--bg3);
+  border: 1px solid var(--border2);
+  border-radius: var(--radius);
+  color: var(--text);
+  font-size: 12px; line-height: 1.55; resize: vertical;
+  transition: border-color 0.2s;
+}
+.trd-textarea:focus { outline: none; border-color: var(--purple); }
+.trd-textarea:disabled { opacity: 0.5; }
+
+.trd-controls { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+.demo-text-pills { display: flex; gap: 6px; flex-wrap: wrap; }
+
+.demo-pill {
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: none; color: var(--text3);
+  font-size: 11px; cursor: pointer; transition: all 0.15s;
+}
+.demo-pill:hover:not(:disabled) { color: var(--purple); border-color: rgba(167,139,250,0.4); background: rgba(167,139,250,0.06); }
+.demo-pill:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.trd-run-btn {
+  display: flex; align-items: center; gap: 8px;
+  padding: 9px 18px;
+  background: rgba(167,139,250,0.1);
+  border: 1px solid rgba(167,139,250,0.4);
+  border-radius: var(--radius);
+  color: var(--purple);
+  font-family: var(--font-head); font-weight: 700; font-size: 13px;
+  cursor: pointer; transition: all 0.15s; white-space: nowrap;
+}
+.trd-run-btn:hover:not(:disabled) { background: rgba(167,139,250,0.18); box-shadow: 0 0 12px rgba(167,139,250,0.2); }
+.trd-run-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-spin {
+  width: 14px; height: 14px;
+  border: 2px solid rgba(167,139,250,0.3);
+  border-top-color: var(--purple);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.trd-error { font-size: 12px; color: var(--danger); padding: 8px 12px; background: rgba(255,56,96,0.06); border-radius: var(--radius); }
+
+/* Summary */
+.trd-summary { display: flex; gap: 20px; flex-wrap: wrap; }
+.trd-sum-item { font-size: 13px; color: var(--text2); }
+.trd-sum-item .accent { color: var(--accent); }
+.trd-sum-item .danger { color: var(--danger); }
+.trd-sum-item .safe   { color: var(--safe); }
+.trd-sum-item .warn   { color: var(--warn); }
+
+/* Attack chips grid */
+.trd-chips {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+}
+
+.text-attack-chip {
+  display: flex; flex-direction: column; gap: 6px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg3);
+  transition: border-color 0.15s;
+}
+.text-attack-chip.evades { border-color: rgba(255,56,96,0.3); background: rgba(255,56,96,0.03); }
+.text-attack-chip.caught { border-color: rgba(0,230,118,0.2); }
+
+.tac-top { display: flex; align-items: center; gap: 8px; }
+
+.tac-badge {
+  font-size: 10px; font-weight: 700;
+  width: 16px; height: 16px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.tac-badge.danger { background: rgba(255,56,96,0.15); color: var(--danger); }
+.tac-badge.safe   { background: rgba(0,230,118,0.1);  color: var(--safe); }
+
+.tac-name   { font-size: 12px; color: var(--text); flex: 1; }
+.tac-changes { font-size: 10px; color: var(--text3); }
+
+.tac-bar-row { display: flex; align-items: center; gap: 8px; }
+
+.tac-scores { display: flex; align-items: center; gap: 5px; flex-shrink: 0; }
+.tac-score  { font-size: 13px; font-weight: 700; }
+.tac-score.accent { color: var(--accent); }
+.tac-score.danger { color: var(--danger); }
+.tac-score.safe   { color: var(--safe); }
+.tac-arrow  { font-size: 11px; color: var(--text3); }
+
+.tac-drop-track {
+  flex: 1; height: 4px; background: var(--bg2);
+  border-radius: 100px; overflow: hidden;
+}
+.tac-drop-fill { height: 100%; border-radius: 100px; }
+.tac-drop-fill.danger { background: var(--danger); }
+.tac-drop-fill.warn   { background: var(--warn); }
+
+.trd-note {
+  font-size: 10px; color: var(--text3); line-height: 1.5;
+  padding-top: 8px; border-top: 1px solid var(--border);
+  letter-spacing: 0.02em;
+}
